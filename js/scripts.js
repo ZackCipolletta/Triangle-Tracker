@@ -11,12 +11,15 @@ function submitFunc(event) {
         let side3 = parseInt(document.getElementById("side3").value);
         
         let result = parseInt(side1 + side2 + side3);
-        if (side1 === side2 && side2 === side3){
-            result = "Equilateral"
-        } else if (side1 === side2 || side2 == side3 || side1 === side3){
-            result = "Isoceles"
-        } else if (side1 + side2 > side3 || side1 + side3 > side2 || side2 + side3 > side1){
-            result = "Scalene"
+        if (side1 > 0 && side2 > 0 && side3 > 0) {
+
+            if (side1 === side2 && side2 === side3){
+                result = "Equilateral"
+            } else if (side1 === side2 || side2 === side3 || side1 === side3){
+                result = "Isoceles"
+            } else if (side1 + side2 >= side3 || side1 + side3 >= side2 || side2 + side3 >= side1){
+                result = "Scalene"
+            }else (result = "Not A Triangle")
         }else (result = "Not A Triangle")
         
         return result;
