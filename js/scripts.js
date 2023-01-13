@@ -4,7 +4,6 @@ function submitFunc(event) {
         triangleType();
         displayResults();
 }
-
     function triangleType() {
         let side1 = parseInt(document.getElementById("side1").value);
         let side2 = parseInt(document.getElementById("side2").value);
@@ -30,7 +29,6 @@ function submitFunc(event) {
         results.innerHTML=(triangleType());
         return results;
     }
-
 
 window.addEventListener("load", function() {
     document.getElementById('triangleForm').addEventListener("submit", submitFunc);
